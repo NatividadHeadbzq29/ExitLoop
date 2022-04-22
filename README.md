@@ -1,0 +1,2 @@
+# ExitLoop
+Name:               _FormatByteSize Description:        Convert a size in bytes to a human-readable representation. Author:             dany Parameters:         $iBytes     - Int: bytes to convert. Return values:      String: Human readable representation of $iBytes. #ce Func _FormatByteSize($iBytes)     Local $i = 0, $aUnit[9] = ['B', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB']     While $iBytes > 1023         $iBytes = $iBytes / 1024         $i += 1         If 8 = $i Then ExitLoop
